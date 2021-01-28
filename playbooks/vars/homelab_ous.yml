@@ -1,0 +1,15 @@
+
+# Define your applications and desired state here
+organizationunits:
+  - ouname: "labcompany"
+    oupath: "dc=lab, dc=local"
+  - ouname: "Groups"
+    oupath: "ou=labcompany, dc=lab, dc=local"
+  - ouname: "Users"
+    oupath: "ou=labcompany, dc=lab, dc=local"
+  - ouname: "CVAD"
+    oupath: "ou=labcompany, dc=lab, dc=local"
+  - ouname: "Horizon"
+    oupath: "ou=labcompany, dc=lab, dc=local"
+  - ouname: "VDIs"
+    oupath: "ou= Horizon, ou=labcompany, dc=lab, dc=local"

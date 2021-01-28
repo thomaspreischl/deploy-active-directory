@@ -1,0 +1,22 @@
+---
+
+#Fill my Active Directory with OUs, Groups and Users
+
+- name: Create AD OrganizationalUnits
+  hosts: firstdc
+  vars_files:
+    - ./vars/homelab_ous.yml
+  gather_facts: no
+  roles:
+    - create-activedirectory-ous
+
+
+- name: Create AD Users and Groups
+  hosts: firstdc
+  vars:
+    userpassword: "Login2021!"
+  vars_files:
+    - ./vars/homelab_usersgroups.yml
+  gather_facts: no
+  roles:
+    - create-activedirectory-groupsandusers

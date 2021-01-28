@@ -1,0 +1,96 @@
+
+# Define your Active Directory Groups here
+adgroups:
+  - groupname: DriveAccess_IT
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_HR
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_CLevel
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_AC
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_FM
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_FC
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_MO
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+  - groupname: DriveAccess_AD
+    scope: domainlocal
+    category: security
+    path: "ou=groups,ou=labcompany,dc=lab,dc=local"
+
+
+# Define your Users and assign them to the Groups
+
+adusers:
+  - name: "bob.brown"
+    description: "Useraccount was created with automation"
+    firstname: "Bob"
+    surname: "Brown"
+    email: "bob.brown@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "charly.white"
+    description: "Useraccount was created with automation"
+    firstname: "Charly"
+    surname: "White"
+    email: "charly.white@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "betty.bloom"
+    description: "Useraccount was created with automation"
+    firstname: "Betty"
+    surname: "bloom"
+    email: "betty.bloom@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "graham.mason"
+    description: "Useraccount was created with automation"
+    firstname: "Graham"
+    surname: "Mason"
+    email: "graham.mason@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "eve.andreson"
+    description: "Useraccount was created with automation"
+    firstname: "Eve"
+    surname: "Anderson"
+    email: "eve.anderson@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "grace.watson"
+    description: "Useraccount was created with automation"
+    firstname: "Grace"
+    surname: "Watson"
+    email: "grace.watson@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "logan.robinson"
+    description: "Useraccount was created with automation"
+    firstname: "Logan"
+    surname: "Robinson"
+    email: "logan.robinson@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC
+  - name: "alan.hunt"
+    description: "Useraccount was created with automation"
+    firstname: "Alan"
+    surname: "Hunt"
+    email: "alan.hunt@lab.de"
+    path: "ou=users,ou=labcompany,dc=lab,dc=local"
+    groups: DriveAccess_AD , DriveAccess_FC , DriveAccess_AC

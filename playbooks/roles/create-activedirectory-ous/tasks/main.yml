@@ -1,0 +1,21 @@
+---
+
+
+- name: Powershell | Install Required Powershell Modules
+  win_psmodule:
+    name: xActiveDirectory
+    state: present
+
+- name: "Install XactiveDirectory"
+  win_psmodule:
+    name: ActiveDirectoryDSC
+    state: present
+
+
+
+- name: "Create OUs"
+  win_dsc:
+    resource_name: ADOrganizationalUnit
+    name: '{{ item.ouname }}'
+    path:  '{{ item.oupath }}'
+  with_items: "{{ organizationunits }}"

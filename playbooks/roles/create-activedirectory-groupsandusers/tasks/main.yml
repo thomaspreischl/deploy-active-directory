@@ -1,0 +1,27 @@
+---
+
+#Create Active Directory Usergroups
+  - name: Create Active Directory Usergroups
+    win_domain_group:
+      name: "{{ item.groupname }}"
+      state: present
+      scope: "{{ item.scope }}"
+      category: "{{ item.category }}"
+      path: "{{ item.path }}"
+    with_items: "{{ adgroups }}"
+
+
+#Create Active Directory Useraccounts
+  - name: Create Active Directory Useraccounts
+    win_domain_user:
+      name: "{{ item.name }}"
+      firstname: "{{ item.firstname | default('') }}"
+      surname: "{{ item.surname | default('') }}"
+      email: "{{ item.surname | default('') }}"
+      path: "{{ item.path }}"
+      state: present
+      password: "{{ userpassword }}"
+      update_password: on_create
+      groups: "{{ item.groups }}"
+      description: "{{ item.description | default('') }}"
+    with_items: "{{ adusers }}"

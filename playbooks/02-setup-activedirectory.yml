@@ -1,0 +1,13 @@
+---
+
+
+#Deploy Domaincontroller
+- name: Setup first Domaincontroller
+  hosts: firstdc
+
+  gather_facts: yes
+  roles:
+    - create-activedirectory
+    
+
+
