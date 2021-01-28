@@ -1,0 +1,38 @@
+#local Serverlogin for Windows VMs
+ansible_user: Administrator
+ansible_password: YourPassw0rd
+ansible_port: 5986
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore
+
+
+
+## This part is required for ## Deploy VMS on vSphere ## read  https://github.com/thomaspreischl/delploy-vmware-environment // https://www.thomaspreischl.de/automate-vmware-vms
+#VMware Settings
+vcenter_datacenter: "DatacenterName"
+vcenter_cluster: YourCluster
+vcenter_hostname: vcenter.lab.local
+vcenter_user: administrator@vsphere.local
+vcenter_pass: YourPassw0rd
+validate_certs: false
+
+#Template Settings
+vmtemplate: Template-Base2019_1608578927
+datastore: ds_vmlab
+vm_foldername: /LAB
+vm_network: vnetVMs
+
+
+#Virtual Maschine Settings
+
+#IP Settings
+guest_netmask: '255.255.255.0'
+guest_gateway: '192.168.1.1'
+
+
+
+## This part is required for # Setup your Active Directory and fill it with OUs, Groups and Users ## read https://github.com/thomaspreischl/deploy-active-directory // https://www.thomaspreischl.de/automate-vmware-vms
+#please specify your desired Domainname and password
+domain_name: lab.local
+domain_admin: lab.local\administrator
+ad_recovery_password: YourPassw0rd
